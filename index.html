@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Energi Terbarukan & Tak Terbarukan – Fisika Kelas X</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--bg:#f5f6f0;--card:#fff;--ink:#12302d;--mut:#51655f;--line:#d7ddd3;--ren:#2e8b57;--non:#8a5a2b;--sun:#f2b632;--acc:#12302d;--accink:#fff;--soft:#e8efe6}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#0e1c1a;--card:#16282558;--ink:#e8f0ea;--mut:#9db3ab;--line:#2c433e;--ren:#5cc58b;--non:#d79b62;--acc:#f2b632;--accink:#12302d;--soft:#1b302c}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#0e1c1a;--card:#162825;--ink:#e8f0ea;--mut:#9db3ab;--line:#2c433e;--ren:#5cc58b;--non:#d79b62;--acc:#f2b632;--accink:#12302d;--soft:#1b302c}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.6 "Public Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.15;margin:0 0 .5em}
+h1{font-size:clamp(2rem,6vw,3.4rem);font-weight:800;letter-spacing:-.02em}
+h2{font-size:1.6rem;font-weight:700}h3{font-size:1.15rem;font-weight:700}
+.wrap{max-width:900px;margin:0 auto;padding:0 18px}
+header{padding:28px 0 12px}
+header p{color:var(--mut);max-width:60ch;margin:0}
+nav{position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);z-index:5;border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;gap:6px;overflow-x:auto;padding-top:8px;padding-bottom:8px}
+nav button{flex:none;border:0;background:none;color:var(--mut);font:600 .95rem "Public Sans",sans-serif;padding:8px 14px;border-radius:999px;cursor:pointer}
+nav button[aria-selected=true]{background:var(--acc);color:var(--accink)}
+button:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--sun);outline-offset:2px}
+section{display:none;padding:22px 0 60px}section.on{display:block}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin:0 0 12px}
+.chip{display:inline-block;font-size:.8rem;font-weight:600;padding:2px 10px;border-radius:999px;color:#fff;margin-left:6px;vertical-align:middle}
+.T{background:var(--ren)}.N{background:var(--non)}
+details.card summary{cursor:pointer;font:700 1.1rem "Bricolage Grotesque",sans-serif;list-style:none}
+details.card summary::-webkit-details-marker{display:none}
+details.card[open] summary{margin-bottom:8px}
+.sub{color:var(--mut);font-size:.92rem}
+.row{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px}
+.btn{border:1px solid var(--line);background:var(--card);color:var(--ink);padding:8px 14px;border-radius:10px;font:600 .92rem "Public Sans",sans-serif;cursor:pointer}
+.btn.on,.btn:hover{background:var(--acc);color:var(--accink);border-color:var(--acc)}
+.grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+label{display:block;font-weight:600;margin:10px 0 2px}
+input[type=range]{width:100%;accent-color:var(--ren)}
+select{width:100%;padding:9px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:inherit}
+.out{background:var(--soft);border-radius:12px;padding:14px 16px;margin-top:12px}
+.big{font:800 2.2rem "Bricolage Grotesque",sans-serif;color:var(--ren)}
+.bar{display:flex;height:30px;border-radius:8px;overflow:hidden;margin:10px 0;font-size:.8rem;font-weight:600;color:#fff}
+.bar div{display:flex;align-items:center;justify-content:center;min-width:0;transition:flex .3s}
+code,.f{font-family:ui-monospace,Menlo,monospace;background:var(--soft);padding:2px 6px;border-radius:6px;font-size:.9em}
+.opt{display:block;width:100%;text-align:left;margin:6px 0}
+.opt.ok{background:var(--ren);color:#fff;border-color:var(--ren)}.opt.no{background:#b3402e;color:#fff;border-color:#b3402e}
+ul,ol{padding-left:1.3em;margin:.3em 0 .8em}
+table{border-collapse:collapse;width:100%;font-size:.92rem}td,th{border:1px solid var(--line);padding:6px 8px;text-align:left}
+.scroll{overflow-x:auto}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+@media print{nav,header .btn,.noprint{display:none}section{display:block!important}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<p class="sub">Fisika • Kelas X • Energi Alternatif</p>
+<h1>Energi Terbarukan dan Tak Terbarukan</h1>
+<p>Pelajari delapan jenis pembangkit listrik, hitung dayanya lewat simulasi, uji pemahamanmu, lalu bangun proyek sederhana bersama kelompok.</p>
+</div></header>
+<nav><div class="wrap" role="tablist" id="tabs"></div></nav>
+<main class="wrap">
+
+<section id="beranda">
+<h2>Tujuan belajar</h2>
+<div class="card"><ul>
+<li>Membedakan sumber energi terbarukan dan tak terbarukan beserta contohnya.</li>
+<li>Menjelaskan prinsip kerja PLTA, PLTU, PLTN, PLTB, PLTS, PLTBg, PLTBm, dan PLTO.</li>
+<li>Menghitung daya listrik pembangkit dari data sederhana.</li>
+<li>Menyusun dan menguji proyek model energi di sekolah atau rumah.</li>
+</ul></div>
+<h2>Konsep kunci</h2>
+<div class="grid">
+<div class="card"><h3>Terbarukan <span class="chip T">EBT</span></h3><p>Sumber yang pulih secara alami dalam waktu singkat: matahari, air, angin, biomassa, biogas, dan gelombang laut.</p></div>
+<div class="card"><h3>Tak terbarukan <span class="chip N">Habis</span></h3><p>Sumber yang terbentuk jutaan tahun dan habis bila dipakai terus: minyak bumi, gas alam, batubara, dan uranium.</p></div>
+</div>
+<div class="card"><h3>Hukum Kekekalan Energi</h3><p>Setiap pembangkit mengubah satu bentuk energi menjadi energi listrik. Energi tidak hilang, tetapi sebagian berubah menjadi kalor. Karena itu efisiensi selalu di bawah 100%:</p><p><span class="f">η = (P keluaran ÷ P masukan) × 100%</span></p></div>
+<p class="sub">Mulai dari tab Materi, lanjutkan ke Simulasi, Latihan, lalu LKPD.</p>
+</section>
+
+<section id="materi">
+<h2>Delapan jenis pembangkit</h2>
+<div class="row" id="filter"></div>
+<div id="plants"></div>
+<h2>Energi tak terbarukan</h2>
+<div class="scroll"><table>
+<tr><th>Sumber</th><th>Asal</th><th>Pemakaian</th><th>Dampak</th></tr>
+<tr><td>Batubara</td><td>Sisa tumbuhan purba yang terkubur</td><td>PLTU, industri</td><td>CO₂ tertinggi, abu, SO₂</td></tr>
+<tr><td>Minyak bumi</td><td>Sisa organisme laut purba</td><td>BBM, PLTD</td><td>CO₂, polusi udara, tumpahan minyak</td></tr>
+<tr><td>Gas alam</td><td>Gas metana terperangkap di batuan</td><td>PLTG, PLTGU, LPG</td><td>CO₂ lebih rendah dari batubara</td></tr>
+<tr><td>Uranium</td><td>Bijih tambang</td><td>PLTN</td><td>Tanpa CO₂ saat operasi, tetapi ada limbah radioaktif</td></tr>
+</table></div>
+<div class="card" style="margin-top:12px"><h3>Catatan klasifikasi</h3><p>PLTU dan PLTN dikelompokkan tak terbarukan karena bahan bakarnya (batubara, uranium) terbatas. PLTN tidak menghasilkan CO₂ saat beroperasi, sehingga sering disebut energi bersih, tetapi bukan energi terbarukan.</p></div>
+</section>
+
+<section id="simulasi">
+<h2>Simulasi 1: Hitung daya pembangkit</h2>
+<div class="card">
+<label for="stype">Jenis pembangkit</label><select id="stype"></select>
+<div id="sliders"></div>
+<div class="out"><div class="sub" id="sform"></div><div class="big" id="spow"></div><div id="shome"></div></div>
+</div>
+<h2>Simulasi 2: Bauran energi dan emisi CO₂</h2>
+<div class="card">
+<p class="sub">Atur porsi tiap sumber. Total dihitung otomatis menjadi 100%.</p>
+<label for="m1">Batubara (PLTU)</label><input type="range" id="m1" min="0" max="100" value="60">
+<label for="m2">Minyak dan gas</label><input type="range" id="m2" min="0" max="100" value="20">
+<label for="m3">Energi terbarukan (air, surya, angin, biogas, biomassa)</label><input type="range" id="m3" min="0" max="100" value="20">
+<div class="bar" id="mbar"></div>
+<div class="out"><div>Emisi rata-rata: <b id="mco2"></b> kg CO₂ per kWh</div><div>Emisi untuk 1 rumah (150 kWh/bulan): <b id="mhome"></b> kg CO₂ per bulan</div><div id="mmsg" class="sub"></div></div>
+<p class="sub">Faktor emisi yang dipakai (perkiraan siklus hidup): batubara 0,95; minyak dan gas 0,55; terbarukan 0,04 kg CO₂/kWh.</p>
+</div>
+</section>
+
+<section id="latihan">
+<h2>Latihan soal</h2>
+<p class="sub">Gunakan g = 10 m/s² dan ρ air = 1000 kg/m³. Pilih jawaban untuk melihat pembahasan.</p>
+<div id="quiz"></div>
+<div class="card"><b id="score">Skor: 0 dari 9 terjawab</b></div>
+</section>
+
+<section id="lkpd">
+<h2>LKPD proyek kelompok</h2>
+<p class="sub">Bagi kelas menjadi 8 kelompok, satu kelompok satu pembangkit. Gunakan bahan bekas, dampingi oleh guru atau orang dewasa, dan patuhi catatan keselamatan.</p>
+<div class="row noprint"><button class="btn" onclick="window.print()">Cetak LKPD</button></div>
+<div id="lk"></div>
+<div class="card"><h3>Rubrik penilaian</h3><div class="scroll"><table>
+<tr><th>Aspek</th><th>Skor 4</th><th>Skor 2</th><th>Skor 1</th></tr>
+<tr><td>Rancangan dan prinsip kerja</td><td>Sesuai konsep, dilengkapi alur energi</td><td>Sesuai sebagian</td><td>Kurang sesuai</td></tr>
+<tr><td>Data pengamatan</td><td>Lengkap, 3 kali ulang, satuan benar</td><td>Lengkap tanpa pengulangan</td><td>Tidak lengkap</td></tr>
+<tr><td>Analisis dan kesimpulan</td><td>Memakai rumus dan data</td><td>Deskriptif saja</td><td>Tidak relevan</td></tr>
+<tr><td>Kerja sama dan keselamatan</td><td>Semua berperan, K3 dipatuhi</td><td>Sebagian berperan</td><td>Tidak tertib</td></tr>
+</table></div></div>
+</section>
+
+<section id="dev">
+<h2>Pengembang</h2>
+<div class="card">
+<h3>Virgiani Pangestika Fajrin, M.Pd</h3>
+<p>Guru Mata Pelajaran Fisika<br>Jenjang: Kelas X (Fase E)<br>Topik: Energi Terbarukan dan Tak Terbarukan</p>
+</div>
+<div class="card"><h3>Tentang modul</h3><p>Modul interaktif ini memuat materi delapan jenis pembangkit, dua simulasi, sembilan soal latihan, dan delapan LKPD proyek. Angka pada simulasi bersifat pendekatan untuk pembelajaran.</p>
+<div class="row"><button class="btn" id="theme">Ganti tema terang/gelap</button></div></div>
+</section>
+</main>
+
+<script>
+const $=s=>document.querySelector(s);
+const tabs=[["beranda","Beranda"],["materi","Materi"],["simulasi","Simulasi"],["latihan","Latihan"],["lkpd","LKPD"],["dev","Pengembang"]];
+function show(id){document.querySelectorAll("section").forEach(s=>s.classList.toggle("on",s.id===id));
+document.querySelectorAll("#tabs button").forEach(b=>b.setAttribute("aria-selected",b.dataset.id===id));window.scrollTo(0,0);try{history.replaceState(null,"","#"+id)}catch(e){}}
+$("#tabs").innerHTML=tabs.map(t=>`<button role="tab" data-id="${t[0]}">${t[1]}</button>`).join("");
+$("#tabs").onclick=e=>{if(e.target.dataset.id)show(e.target.dataset.id)};
+$("#theme").onclick=()=>{const r=document.documentElement;const d=getComputedStyle(r).getPropertyValue("--bg").trim()==="#0e1c1a";r.dataset.theme=d?"light":"dark"};
+
+const P=[
+["PLTA","Pembangkit Listrik Tenaga Air","T","Energi potensial air → kinetik → mekanik turbin → listrik","Air dari bendungan jatuh melalui pipa pesat, memutar turbin yang dikopel dengan generator.","P = η·ρ·g·Q·h","Stabil, murah saat operasi, tanpa emisi langsung.","Membutuhkan lahan luas, mengubah ekosistem sungai, bergantung musim.","Contoh: Cirata, Saguling, dan Jatiluhur di Jawa Barat."],
+["PLTU","Pembangkit Listrik Tenaga Uap","N","Energi kimia batubara → kalor → uap → mekanik turbin → listrik","Batubara dibakar memanaskan air di boiler menjadi uap bertekanan tinggi yang memutar turbin.","P listrik = η·ṁ·H (ṁ laju bahan bakar, H nilai kalor)","Daya besar, andal, teknologi matang.","Emisi CO₂ dan abu tinggi, bahan bakar akan habis, efisiensi sekitar 35%.","Contoh: PLTU Suralaya, Banten."],
+["PLTN","Pembangkit Listrik Tenaga Nuklir","N","Energi inti uranium → kalor → uap → mekanik turbin → listrik","Fisi inti U-235 oleh neutron melepas kalor. Batang kendali menyerap neutron untuk mengatur reaksi berantai.","P listrik = η·P termal; E = Δm·c²","Daya sangat besar, nyaris tanpa CO₂ saat operasi.","Limbah radioaktif, biaya awal tinggi, risiko kecelakaan, perlu pengawasan ketat.","Indonesia belum punya PLTN komersial; hanya reaktor riset (Kartini, Serpong, Bandung)."],
+["PLTB","Pembangkit Listrik Tenaga Bayu (Angin)","T","Energi kinetik angin → mekanik rotor → listrik","Angin memutar bilah turbin. Daya bergantung pada luas sapuan bilah dan pangkat tiga kecepatan angin.","P = ½·ρ·A·v³·Cp (ρ udara ≈ 1,2 kg/m³; Cp maks 0,59)","Tanpa bahan bakar dan emisi, bisa dipasang di lepas pantai.","Tergantung angin, bising, memengaruhi burung.","Contoh: PLTB Sidrap dan Jeneponto, Sulawesi Selatan."],
+["PLTS","Pembangkit Listrik Tenaga Surya","T","Energi cahaya → listrik (efek fotovoltaik)","Sel surya dari semikonduktor silikon menghasilkan arus searah (DC) saat terkena foton, lalu inverter mengubahnya menjadi AC.","P = A·G·η (G intensitas cahaya, sekitar 1000 W/m² saat terik)","Sumber melimpah di Indonesia, perawatan mudah, modular.","Hanya siang hari, butuh baterai, lahan luas, efisiensi sekitar 15–22%.","Contoh: PLTS Terapung Cirata dan PLTS atap sekolah."],
+["PLTBg","Pembangkit Listrik Tenaga Biogas","T","Energi kimia limbah organik → gas metana → mesin gas → listrik","Bakteri anaerob mengurai kotoran ternak, limbah tahu, atau limbah cair sawit menjadi biogas (±60% CH₄) yang membakar mesin generator.","P = η·ṁ gas·H (nilai kalor biogas ±20 MJ/m³)","Mengolah limbah, sisa lumpur jadi pupuk, mengurangi metana ke udara.","Perlu pengelolaan stabil dan pasokan limbah kontinu, bau bila tidak tertutup.","Contoh: biodigester peternakan sapi dan pabrik kelapa sawit."],
+["PLTBm","Pembangkit Listrik Tenaga Biomassa","T","Energi kimia biomassa → kalor → uap → mekanik turbin → listrik","Sisa pertanian (sekam padi, cangkang sawit, serbuk kayu) dibakar atau digasifikasi untuk menghasilkan uap dan memutar turbin.","P listrik = η·ṁ·H","Memanfaatkan limbah, netral karbon bila ditanam kembali.","Pengumpulan dan pengangkutan bahan, kadar air memengaruhi efisiensi.","Contoh: pembangkit sekam padi dan cangkang sawit."],
+["PLTO","Pembangkit Listrik Tenaga Ombak/Laut","T","Energi gelombang, pasang surut, atau arus laut → mekanik → listrik","Naik turunnya ombak menggerakkan pelampung atau kolom udara yang memutar turbin. Pasang surut dan arus laut juga dapat memutar turbin bawah air.","P gelombang per meter muka ≈ ½·ρ·g·a²·v (a amplitudo, v kecepatan grup)","Dapat diprediksi, potensi besar di negara kepulauan.","Teknologi mahal, korosi air laut, baru tahap uji coba.","Indonesia masih tahap kajian dan uji coba, misalnya arus laut selat Nusa Penida."]
+];
+let flt="all";
+function drawPlants(){
+$("#filter").innerHTML=[["all","Semua"],["T","Terbarukan"],["N","Tak terbarukan"]].map(f=>`<button class="btn ${flt===f[0]?"on":""}" data-f="${f[0]}">${f[1]}</button>`).join("");
+$("#plants").innerHTML=P.filter(p=>flt==="all"||p[2]===flt).map(p=>`<details class="card"><summary>${p[0]} – ${p[1]} <span class="chip ${p[2]}">${p[2]==="T"?"Terbarukan":"Tak terbarukan"}</span></summary>
+<p><b>Alur energi:</b> ${p[3]}</p><p><b>Prinsip kerja:</b> ${p[4]}</p><p><b>Rumus:</b> <span class="f">${p[5]}</span></p>
+<p><b>Kelebihan:</b> ${p[6]}</p><p><b>Kekurangan:</b> ${p[7]}</p><p class="sub">${p[8]}</p></details>`).join("")}
+$("#filter").onclick=e=>{if(e.target.dataset.f){flt=e.target.dataset.f;drawPlants()}};drawPlants();
+
+const fmt=(w)=>w>=1e6?(w/1e6).toFixed(2)+" MW":w>=1e3?(w/1e3).toFixed(1)+" kW":w.toFixed(0)+" W";
+const S={
+PLTA:{s:[["Debit air Q (m³/s)",1,50,10],["Tinggi jatuh h (m)",5,100,20]],f:(a,b)=>.85*1000*10*a*b,t:(a,b)=>`P = 0,85 × 1000 × 10 × ${a} × ${b}`},
+PLTB:{s:[["Jari-jari bilah r (m)",1,50,20],["Kecepatan angin v (m/s)",2,20,8]],f:(a,b)=>.5*1.2*Math.PI*a*a*b**3*.4,t:(a,b)=>`P = ½ × 1,2 × π×${a}² × ${b}³ × 0,4`},
+PLTS:{s:[["Luas panel A (m²)",1,1000,100],["Intensitas cahaya G (W/m²)",200,1000,800]],f:(a,b)=>a*b*.2,t:(a,b)=>`P = ${a} × ${b} × 0,2`},
+PLTU:{s:[["Laju batubara (kg/s)",1,100,20],["Efisiensi (%)",25,45,35]],f:(a,b)=>a*24e6*b/100,t:(a,b)=>`P = ${a} kg/s × 24 MJ/kg × ${b}%`},
+PLTN:{s:[["Daya termal reaktor (MW)",100,3000,2000],["Efisiensi (%)",25,40,33]],f:(a,b)=>a*1e6*b/100,t:(a,b)=>`P = ${a} MW × ${b}%`}
+};
+$("#stype").innerHTML=Object.keys(S).map(k=>`<option>${k}</option>`).join("");
+function drawSim(rebuild){const k=$("#stype").value,d=S[k];
+if(rebuild)$("#sliders").innerHTML=d.s.map((s,i)=>`<label for="sl${i}">${s[0]}: <b id="sv${i}"></b></label><input type="range" id="sl${i}" min="${s[1]}" max="${s[2]}" value="${s[3]}">`).join("");
+const v=d.s.map((_,i)=>+$("#sl"+i).value);d.s.forEach((_,i)=>$("#sv"+i).textContent=v[i]);
+const p=d.f(v[0],v[1]);$("#sform").textContent=d.t(v[0],v[1]);$("#spow").textContent=fmt(p);
+$("#shome").textContent="Cukup untuk sekitar "+Math.round(p/500).toLocaleString("id-ID")+" rumah (asumsi 500 W per rumah). "+(k==="PLTB"?"Coba naikkan v dua kali: daya naik 8 kali.":"")}
+$("#stype").onchange=()=>drawSim(true);$("#sliders").oninput=()=>drawSim(false);drawSim(true);
+
+function drawMix(){const a=+$("#m1").value,b=+$("#m2").value,c=+$("#m3").value,t=a+b+c||1;
+const x=[a/t,b/t,c/t],co=x[0]*.95+x[1]*.55+x[2]*.04;
+const cl=["#6b4a2b","#9a7b4f","#2e8b57"],nm=["Batubara","Migas","EBT"];
+$("#mbar").innerHTML=x.map((v,i)=>`<div style="flex:${v};background:${cl[i]}">${v>.12?nm[i]+" "+Math.round(v*100)+"%":""}</div>`).join("");
+$("#mco2").textContent=co.toFixed(2).replace(".",",");$("#mhome").textContent=(co*150).toFixed(0);
+$("#mmsg").textContent=x[2]>=.5?"Mayoritas EBT: emisi turun jauh. Tantangannya adalah menjaga pasokan saat malam atau tanpa angin.":"Porsi EBT masih rendah. Coba naikkan hingga 50% dan lihat penurunan emisinya."}
+["m1","m2","m3"].forEach(i=>$("#"+i).oninput=drawMix);drawMix();
+
+const Q=[
+["Pembangkit berikut yang memakai sumber energi terbarukan adalah…",["PLTU","PLTN","PLTB","PLTD"],2,"Angin pulih secara alami, sedangkan batubara, uranium, dan solar akan habis."],
+["Urutan perubahan energi pada PLTA yang benar adalah…",["Kinetik → potensial → listrik","Potensial → kinetik → mekanik → listrik","Kimia → kalor → listrik","Kalor → kinetik → listrik"],1,"Air di ketinggian menyimpan energi potensial, jatuh menjadi kinetik, memutar turbin (mekanik), lalu generator menghasilkan listrik."],
+["PLTA dengan debit 10 m³/s, tinggi jatuh 20 m, dan η = 80% menghasilkan daya…",["160 kW","1,6 MW","16 MW","2 MW"],1,"P = 0,8 × 1000 × 10 × 10 × 20 = 1.600.000 W = 1,6 MW."],
+["Jika kecepatan angin pada PLTB menjadi dua kali, daya teoretisnya menjadi…",["2 kali","4 kali","6 kali","8 kali"],3,"Daya sebanding dengan v³, jadi 2³ = 8 kali."],
+["Gas utama pada biogas yang dapat dibakar adalah…",["Karbon dioksida","Metana","Oksigen","Nitrogen"],1,"Penguraian anaerob limbah organik menghasilkan metana (CH₄) sekitar 60%."],
+["PLTU dikelompokkan tak terbarukan karena…",["Memakai turbin","Menghasilkan uap","Bahan bakarnya batubara yang terbentuk jutaan tahun dan terbatas","Dayanya besar"],2,"Pengelompokan didasarkan pada sumber energi, bukan pada komponen pembangkitnya."],
+["Fungsi batang kendali pada reaktor PLTN adalah…",["Menaikkan suhu","Menyerap neutron untuk mengatur reaksi berantai","Memutar turbin","Mendinginkan generator"],1,"Bahan penyerap neutron (misalnya boron atau kadmium) dimasukkan atau ditarik untuk mengatur laju fisi."],
+["Panel surya 10 m², G = 800 W/m², η = 20%. Dayanya adalah…",["160 W","800 W","1600 W","8000 W"],2,"P = 10 × 800 × 0,2 = 1600 W."],
+["PLTO memanfaatkan energi dari…",["Gelombang, pasang surut, atau arus laut","Panas bumi","Pembakaran sampah","Fisi uranium"],0,"PLTO memanfaatkan gerak air laut."]
+];
+let sc=0,ans=0;
+$("#quiz").innerHTML=Q.map((q,i)=>`<div class="card" id="q${i}"><b>${i+1}. ${q[0]}</b>${q[1].map((o,j)=>`<button class="btn opt" data-q="${i}" data-o="${j}">${o}</button>`).join("")}<div class="sub" id="ex${i}"></div></div>`).join("");
+$("#quiz").onclick=e=>{const b=e.target.closest(".opt");if(!b)return;const i=+b.dataset.q,j=+b.dataset.o,c=$("#q"+i);if(c.dataset.done)return;c.dataset.done=1;
+const ok=j===Q[i][2];c.querySelectorAll(".opt").forEach((x,k)=>{if(k===Q[i][2])x.classList.add("ok");else if(k===j)x.classList.add("no")});
+$("#ex"+i).textContent=(ok?"Benar. ":"Belum tepat. ")+Q[i][3];ans++;if(ok)sc++;$("#score").textContent=`Skor: ${sc} benar dari ${ans} terjawab (total ${Q.length} soal)`};
+
+const L=[
+["PLTA","Kincir air mini","Mengubah energi kinetik air menjadi listrik dan menghitung dayanya.","Botol bekas, sendok plastik atau sendok bekas, dinamo/motor DC kecil, kabel, LED, selang, ember, penggaris, stopwatch.","Buat roda kincir dari botol dan bilah sendok; 2) kaitkan poros ke dinamo; 3) alirkan air dari ember pada tinggi h = 20 cm, 40 cm, 60 cm; 4) catat tegangan atau nyala LED; 5) ukur debit dengan gelas ukur dan stopwatch.","Tinggi h (cm) | Debit (mL/s) | Tegangan (V) | Nyala LED","Bagaimana h memengaruhi tegangan? Hitung P = ρ·g·Q·h air yang jatuh. Apa alur energinya?"],
+["PLTB","Kincir angin kertas","Menyelidiki pengaruh kecepatan angin dan jumlah bilah pada tegangan.","Karton, sedotan, motor DC kecil, multimeter atau LED, kipas angin 3 kecepatan, lem, gunting.","Rakit rotor 3, 4, dan 6 bilah; 2) pasang pada motor; 3) arahkan kipas kecepatan 1, 2, 3 pada jarak sama; 4) catat tegangan; 5) ulang 3 kali.","Jumlah bilah | Kecepatan kipas | Tegangan (V)","Jumlah bilah mana paling optimal? Mengapa daya sebanding v³? Bagaimana menentukan lokasi PLTB di daerahmu?"],
+["PLTS","Panel surya mini","Mengukur pengaruh sudut dan intensitas cahaya pada daya panel.","Panel surya mini 6 V, multimeter, hambatan 100 Ω, busur, penggaris, senter atau sinar matahari.","Hubungkan panel dengan hambatan; 2) ukur V pada sudut 0°, 30°, 60°, 90° terhadap sinar; 3) ukur pada tempat teduh dan terik; 4) hitung P = V²/R.","Sudut | Kondisi cahaya | V (volt) | P (watt)","Sudut berapa paling optimal? Hitung η = P/(A·G) bila G diketahui. Berapa panel untuk menyalakan lampu kelas?"],
+["PLTBg","Biodigester botol","Mengamati pembentukan biogas dari limbah organik.","Botol besar 1,5 L, balon, selang kecil, sisa sayur atau kotoran hewan, air, lakban, lem.","Campur limbah dan air 1:1, isi 2/3 botol; 2) tutup rapat, pasang balon pada mulut botol; 3) simpan 7–14 hari di tempat teduh; 4) ukur keliling balon tiap hari.","Hari | Keliling balon (cm) | Suhu ruang | Bau","Mengapa balon mengembang? Gas apa yang terbentuk? Mengapa harus tanpa oksigen? Apa manfaat sisa lumpur?"],
+["PLTBm","Kalor biomassa","Membandingkan nilai kalor beberapa biomassa untuk memanaskan air.","Sekam, serbuk kayu, daun kering, kaleng bekas, termometer, 200 mL air, timbangan, korek (dampingan orang dewasa).","Timbang 10 g tiap biomassa; 2) bakar di bawah wadah berisi 200 mL air; 3) catat kenaikan suhu ΔT; 4) hitung Q = m·c·ΔT, c = 4200 J/kg°C.","Bahan | Massa (g) | ΔT (°C) | Q (J)","Biomassa mana paling efektif? Bagaimana mengurangi asap? Mengapa biomassa dianggap terbarukan?"],
+["PLTO","Model gelombang pelampung","Menunjukkan perubahan gerak gelombang menjadi listrik.","Baskom besar berisi air, pelampung (botol kecil), batang tuas, dinamo mini, LED, penggaris.","Pasang pelampung pada tuas yang menggerakkan dinamo; 2) buat gelombang dengan papan di sisi baskom (3 frekuensi); 3) catat nyala LED atau tegangan; 4) ukur amplitudo gelombang.","Frekuensi gerak papan | Amplitudo (cm) | Tegangan (V)","Apa pengaruh amplitudo? Apa tantangan PLTO di laut nyata? Mengapa potensinya besar di Indonesia?"],
+["PLTU","Model turbin uap","Mengamati perubahan kalor menjadi gerak mekanik.","Kaleng kecil bertutup berlubang, lilin atau pemanas kecil, kincir aluminium atau kertas tebal, jarum, penyangga, pelindung tangan. Wajib didampingi guru.","Isi kaleng sedikit air; 2) panaskan hingga uap keluar dari lubang kecil; 3) arahkan uap ke kincir pada jarak 5 cm; 4) hitung putaran per 10 detik dengan variasi api.","Besar api | Waktu mendidih (s) | Putaran/10 s","Apa alur energinya? Mengapa uap berkecepatan tinggi memutar kincir? Mengapa PLTU membuat emisi dan apa solusinya?"],
+["PLTN","Simulasi reaksi berantai","Memodelkan reaksi berantai dan fungsi batang kendali tanpa bahan radioaktif.","60 bidak domino atau bola pingpong dan perangkap, penyekat karton (batang kendali), kamera ponsel, stopwatch.","Susun domino bercabang sebagai atom U-235; 2) picu satu domino dan rekam jumlah yang jatuh; 3) ulangi dengan 1, 2, dan 3 penyekat sebagai batang kendali; 4) buat grafik jumlah domino jatuh vs waktu.","Jumlah penyekat | Domino jatuh | Waktu (s)","Apa yang terjadi bila tidak ada batang kendali? Jelaskan fisi dan E = Δm·c². Apa untung rugi PLTN?"]
+];
+$("#lk").innerHTML=L.map((l,i)=>`<details class="card"><summary>Kelompok ${i+1}: ${l[0]} – ${l[1]}</summary>
+<p><b>Tujuan:</b> ${l[2]}</p><p><b>Alat dan bahan:</b> ${l[3]}</p>
+<p><b>Langkah kerja:</b></p><ol>${l[4].split(/; \d\) /).map((s,k)=>`<li>${(k?s:s.replace(/^\d\) /,"")).replace(/\.$/,"")}</li>`).join("")}</ol>
+<p><b>Tabel data:</b></p><div class="scroll"><table><tr>${l[5].split(" | ").map(h=>`<th>${h}</th>`).join("")}</tr><tr>${l[5].split(" | ").map(()=>"<td>&nbsp;</td>").join("")}</tr><tr>${l[5].split(" | ").map(()=>"<td>&nbsp;</td>").join("")}</tr></table></div>
+<p><b>Pertanyaan analisis:</b> ${l[6]}</p>
+<p><b>Produk:</b> model berfungsi, poster hasil, dan presentasi 5 menit.</p>
+<p class="sub">Keselamatan: gunakan alat dengan hati-hati, pakai pelindung bila ada panas, dan jauhkan listrik dari air.</p></details>`).join("");
+
+const h=location.hash.slice(1);show(tabs.some(t=>t[0]===h)?h:"beranda");
+addEventListener("hashchange",()=>{const x=location.hash.slice(1);if(tabs.some(t=>t[0]===x))show(x)});
+</script>
+</body>
+</html>
